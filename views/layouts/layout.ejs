@@ -43,10 +43,12 @@
           <div class="collapse navbar-collapse" navbar-menu>
             <!-- LOGGED-IN NAVIGATION -->
             <% if(me) { %>
-            <a class="nav-item nav-link" href="/contact">Help</a>
+            <a class="nav-item nav-link text-dark" href="/friends">Friends</a>
+            <a class="nav-item nav-link text-dark" href="/things">Things</a>
+            <a class="nav-item nav-link text-dark" href="/contact">Help</a>
             <!-- Only in desktop nav -->
             <div class="nav-item dropdown d-none d-sm-block">
-              <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+              <a class="nav-link dropdown-toggle text-dark" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
               <div class="dropdown-menu" aria-labelledby="header-account-menu-link">
                 <a class="dropdown-item" href="/account">Settings</a>
                 <a class="dropdown-item" href="/logout">Logout</a>
@@ -88,13 +90,13 @@
       <%- body %>
 
       <footer id="page-footer" class="navbar navbar-light justify-content-between">
-        <small>Copyright &copy; 2017 Ration.io. All rights reserved.</small>
+        <small class="text-muted">Copyright &copy; 2017 Ration. All rights reserved.</small>
         <div class="nav">
-          <small class="nav-item"><a class="nav-link text-info" href="/contact">Contact us</a></small>
-          <small class="nav-item"><a class="nav-link text-info" href="/legal/terms">Terms of Use</a></small>
-          <small class="nav-item"><a class="nav-link text-info" href="/legal/privacy">Privacy policy</a></small>
+          <small class="nav-item"><a class="nav-link" href="/contact">Contact us</a></small>
+          <small class="nav-item"><a class="nav-link" href="/legal/terms">Terms of Use</a></small>
+          <small class="nav-item"><a class="nav-link" href="/legal/privacy">Privacy policy</a></small>
           <% if(me) { %>
-          <small class="nav-item"><a class="nav-link text-info" href="/logout">Sign out</a></small>
+          <small class="nav-item"><a class="nav-link" href="/logout">Sign out</a></small>
           <% } %>
         </div>
       </footer>
