@@ -19,7 +19,9 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     // Respond with view.
-    return exits.success();
+    return exits.success({
+      currentSection: 'things'
+    });
 
   }
 
