@@ -43,9 +43,12 @@
           <div class="collapse navbar-collapse" navbar-menu>
             <!-- LOGGED-IN NAVIGATION -->
             <% if(me) { %>
-            <a class="nav-item nav-link text-dark" href="/friends">Friends</a>
-            <a class="nav-item nav-link text-dark" href="/things">Things</a>
-            <a class="nav-item nav-link text-dark" href="/contact">Help</a>
+            <a class="nav-item nav-link text-dark <%= typeof currentPage !== 'undefined' && currentPage === 'friends' ? 'current' : ''%>"
+              href="/friends">Friends</a>
+            <a class="nav-item nav-link text-dark <%= typeof currentPage !== 'undefined' && currentPage === 'things' ? 'current' : ''%>"
+              href="/things">Things</a>
+            <a class="nav-item nav-link text-dark <%= typeof currentPage !== 'undefined' && currentPage === 'contact' ? 'current' : ''%>"
+              href="/contact">Help</a>
             <!-- Only in desktop nav -->
             <div class="nav-item dropdown d-none d-sm-block">
               <a class="nav-link dropdown-toggle text-dark" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
@@ -60,7 +63,7 @@
             <% } else { %>
             <!-- LOGGED-OUT NAVIGATION -->
             <a class="nav-item nav-link" href="/faq">FAQ</a>
-            <a class="nav-item nav-link ml-sm-2 mr-sm-1" href="/login">Log in</a>
+            <a class="nav-item nav-link mr-sm-2" href="/login">Log in</a>
             <!-- Only in desktop nav -->
             <div class="form-inline ml-2 d-none d-sm-block" >
               <a class="btn btn-outline-info" href="/signup">Sign up</a>
